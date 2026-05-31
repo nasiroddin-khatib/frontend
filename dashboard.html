@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Dashboard</h1>
+
+    <input
+      type="text"
+      id="title"
+      placeholder="Note title"
+    >
+
+    <textarea
+      id="content"
+      placeholder="Note content"
+    ></textarea>
+
+    <button onclick="createNote()">
+      Create Note
+    </button>
+
+    <hr>
+
+    <div id="notes"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
