@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Log all output
+exec > /var/log/user-data.log 2>&1
+
+# Update packages
+yum update -y
+
+# Install nginx and git
+yum install -y nginx git
+
+# Start and enable nginx
+systemctl start nginx
+systemctl enable nginx
+
+# Go to web directory
+cd /usr/share/nginx/html
+
+# Remove default nginx files
+rm -rf *
+
+# Clone frontend repo
+git clone https://github.com/nasiroddin-khatib/frontend.git
+
+# Move frontend files
+mv frontend/* .
+
+# Remove extra folder
+rm -rf frontend
+
+# Restart nginx
+systemctl restart nginx
