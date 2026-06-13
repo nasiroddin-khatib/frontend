@@ -1,4 +1,4 @@
-const API = 'http://Backend-LB-33015680.ap-south-1.elb.amazonaws.com';
+const API = 'http://Backend-LB-375268929.ap-south-1.elb.amazonaws.com';
 
 
 // ================= REGISTER =================
